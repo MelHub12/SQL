@@ -1,0 +1,21 @@
+USE master
+GO
+
+IF EXISTS (
+SELECT * FROM sys.databases
+WHERE [name] = 'dbMovie')
+DROP DATABASE dbMovie
+GO
+
+CREATE DATABASE dbMovie
+GO
+
+USE dbMovie
+GO
+
+CREATE TABLE tblMovie (
+m_ID INT primary key,
+m_Title  VARCHAR(30) NULL,
+M_Runtime INT NULL,
+M_Rating VARCHAR(10) NULL)
+GO
